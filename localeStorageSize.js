@@ -10,3 +10,5 @@ for (_x in localStorage) {
 };
 console.log("Total = " + (_lsTotal / 1024).toFixed(2) + " KB");
 
+// ONE LINE
+javascript: var x, xLen, log=[],total=0;for (x in localStorage){if(!localStorage.hasOwnProperty(x)){continue;} xLen =  ((localStorage[x].length * 2 + x.length * 2)/1024); log.push(x.substr(0,30) + " = " +  xLen.toFixed(2) + " KB"); total+= xLen}; if (total > 1024){log.unshift("Total = " + (total/1024).toFixed(2)+ " MB");}else{log.unshift("Total = " + total.toFixed(2)+ " KB");}; alert(log.join("\n"));
